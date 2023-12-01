@@ -1,200 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <title>Home</title>
-    <style>
-      .custom-navbar {
-        background-color: #497959;
-      }
-      .custom-navbar .navbar-nav .nav-link {
-        color: #6aed93;
-      }
-      .custom-navbar .navbar-nav .nav-link:hover {
-        color: #004216;
-        background-color: #ffffff22;
-        border-radius: 10%;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<title>Home</title>
+		<style>
+			.custom-navbar {
+				background-color: #497959;
+			}
+			.custom-navbar .navbar-nav .nav-link {
+				color: #6aed93;
+			}
+			.custom-navbar .navbar-nav .nav-link:hover {
+				color: #004216;
+				background-color: #ffffff22;
+				border-radius: 10%;
+			}
 
-      body {
-        background-color: #f8f9fa;
-      }
+			body {
+				background-color: #f8f9fa;
+			}
 
-      .profile-container,
-      .friend-container {
-        max-width: 50%;
-        margin: auto;
-        background-color: rgba(68, 132, 66, 0.323);
-        padding: 1%;
-        border-radius: 5%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
+			.profile-container,
+			.friend-container {
+				max-width: 50%;
+				margin: auto;
+				background-color: rgba(68, 132, 66, 0.323);
+				padding: 1%;
+				border-radius: 5%;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
 
-      .pfp {
-        background-image: linear-gradient(to bottom, #b8d4b900, #ffffff45);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .profile-photo {
-        background-color: rgb(226, 247, 254);
-        border: 2px solid black;
-        width: 27%;
-        height: 27%;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 2%;
-        margin-top: 2%;
-      }
+			.pfp {
+				background-image: linear-gradient(
+					to bottom,
+					#b8d4b900,
+					#ffffff45
+				);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.profile-photo {
+				background-color: rgb(226, 247, 254);
+				border: 2px solid black;
+				width: 27%;
+				height: 27%;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-bottom: 2%;
+				margin-top: 2%;
+			}
 
-      .user-info {
-        text-align: center;
-        margin-bottom: 30px;
-      }
+			.user-info {
+				text-align: center;
+				margin-bottom: 30px;
+			}
 
-      .user-info h2 {
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-        font-style: italic;
-        margin-bottom: 5px;
-      }
+			.user-info h2 {
+				font-family: "Lucida Sans", "Lucida Sans Regular",
+					"Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+					sans-serif;
+				font-style: italic;
+				margin-bottom: 5px;
+			}
 
-      .user-info p {
-        color: #6c757d;
-      }
+			.user-info p {
+				color: #6c757d;
+			}
 
-      .ratings {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+			.ratings {
+				text-align: center;
+				margin-bottom: 20px;
+			}
 
-      .tag-region {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .friend-list {
-        background-color: rgba(68, 132, 66, 0.323);
-        padding: 2%;
-        border-radius: 5%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        margin-top: 20px;
-      }
+			.tag-region {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.friend-list {
+				background-color: rgba(68, 132, 66, 0.323);
+				padding: 2%;
+				border-radius: 5%;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				text-align: center;
+				margin-top: 20px;
+			}
 
-      .friend-list {
-        margin-top: 20px;
-      }
+			.friend-list {
+				margin-top: 20px;
+			}
 
-      .friend-category-card {
-        background-color: #497959;
-        color: #ffffff;
-        border: none;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
+			.friend-category-card {
+				background-color: #497959;
+				color: #ffffff;
+				border: none;
+				border-radius: 10px;
+				margin-bottom: 20px;
+			}
 
-      .friend-category-card h5 {
-        margin-bottom: 10px;
-      }
+			.friend-category-card h5 {
+				margin-bottom: 10px;
+			}
 
-      .friend-item-card {
-        background-color: #ffffff;
-        padding: 8px;
-        border-radius: 5px;
-        margin-bottom: 5px;
-        color: #6c757d;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg custom-navbar">
-      <a class="navbar-brand" href="#"
-        ><img src="images/chess.svg" id="logo"
-      /></a>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="home.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dms.html">DMs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="channel.html">Channels</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="notification.html">Notifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="settings.html">Settings</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <h1 align="center">User Stats</h1>
-    <div class="row">
-      <div class="col-7 container profile-container">
-        <div class="pfp">
-          <img
-            src="/images/chess.svg"
-            alt="Profile Photo"
-            class="profile-photo img-fluid"
-          />
-        </div>
-        <div class="user-info">
-          <h2>Passer Pawn</h2>
-          <p>Date of Join: ----</p>
-        </div>
-        <div class="ratings">
-          <h4>ELO Ratings</h4>
-          <p>Blitz: ----</p>
-          <p>Bullet: ----</p>
-          <p>Rapid: ----</p>
-        </div>
-        <div class="tag-region">
-          <h4>User Tag</h4>
-          <p>PasserPawn#0000</p>
-          <h4>User Region</h4>
-          <p>India</p>
-        </div>
-      </div>
+			.friend-item-card {
+				background-color: #ffffff;
+				padding: 8px;
+				border-radius: 5px;
+				margin-bottom: 5px;
+				color: #6c757d;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-expand-lg custom-navbar">
+			<a
+				class="navbar-brand"
+				href="#"
+				><img
+					src="./images/chess.svg"
+					id="logo"
+			/></a>
+			<div
+				class="collapse navbar-collapse"
+				id="navbarNav"
+			>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a
+							class="nav-link active"
+							href="home.html"
+							>Profile</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="dms.html"
+							>DMs</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="channel.html"
+							>Channels</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="notification.html"
+							>Notifications</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="settings.html"
+							>Settings</a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<h1 align="center">User Stats</h1>
+		<div class="row">
+			<div class="col-7 container profile-container">
+				<div class="pfp">
+					<img
+						src="./images/chess.svg"
+						alt="Profile Photo"
+						class="profile-photo img-fluid"
+					/>
+				</div>
+				<div class="user-info">
+					<h2>Passer Pawn</h2>
+					<p>Date of Join: ----</p>
+				</div>
+				<div class="ratings">
+					<h4>ELO Ratings</h4>
+					<p>Blitz: ----</p>
+					<p>Bullet: ----</p>
+					<p>Rapid: ----</p>
+				</div>
+				<div class="tag-region">
+					<h4>User Tag</h4>
+					<p>PasserPawn#0000</p>
+					<h4>User Region</h4>
+					<p>India</p>
+				</div>
+			</div>
 
-      <div class="col-5 container friend-container">
-        <h4>Friend List</h4>
+			<div class="col-5 container friend-container">
+				<h4>Friend List</h4>
 
-        <div class="card friend-category-card">
-          <div class="card-body">
-            <h5 class="card-title">Pending Requests</h5>
-            <div class="friend-item-card">Friend Request 1</div>
-            <div class="friend-item-card">Friend Request 2</div>
-          </div>
-        </div>
+				<div class="card friend-category-card">
+					<div class="card-body">
+						<h5 class="card-title">Pending Requests</h5>
+						<div class="friend-item-card">Friend Request 1</div>
+						<div class="friend-item-card">Friend Request 2</div>
+					</div>
+				</div>
 
-        <div class="card friend-category-card">
-          <div class="card-body">
-            <h5 class="card-title">Online Friends</h5>
-            <div class="friend-item-card">Online Friend 1</div>
-            <div class="friend-item-card">Online Friend 2</div>
-          </div>
-        </div>
+				<div class="card friend-category-card">
+					<div class="card-body">
+						<h5 class="card-title">Online Friends</h5>
+						<div class="friend-item-card">Online Friend 1</div>
+						<div class="friend-item-card">Online Friend 2</div>
+					</div>
+				</div>
 
-        <div class="card friend-category-card">
-          <div class="card-body">
-            <h5 class="card-title">Offline Friends</h5>
-            <div class="friend-item-card">Offline Friend 1</div>
-            <div class="friend-item-card">Offline Friend 2</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+				<div class="card friend-category-card">
+					<div class="card-body">
+						<h5 class="card-title">Offline Friends</h5>
+						<div class="friend-item-card">Offline Friend 1</div>
+						<div class="friend-item-card">Offline Friend 2</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
